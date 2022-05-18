@@ -145,5 +145,7 @@ config_enable_uffd_gc := \
 
 ADDITIONAL_VENDOR_PROPERTIES := $(strip $(ADDITIONAL_VENDOR_PROPERTIES))
 
+-include vendor/leaf/build/core/sysprop_config.mk
+
 .KATI_READONLY += \
     ADDITIONAL_VENDOR_PROPERTIES
