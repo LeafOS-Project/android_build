@@ -412,27 +412,8 @@ else if get_stage("%(bcb_dev)s") != "3/3" then
   if updating_boot:
     boot_type, boot_device_expr = common.GetTypeAndDeviceExpr("/boot",
                                                               source_info)
-    d = common.Difference(target_boot, source_boot)
-    _, _, d = d.ComputePatch()
-    if d is None:
-      include_full_boot = True
-      common.ZipWriteStr(output_zip, "boot.img", target_boot.data)
-    else:
-      include_full_boot = False
-
-      logger.info(
-          "boot      target: %d  source: %d  diff: %d", target_boot.size,
-          source_boot.size, len(d))
-
-      common.ZipWriteStr(output_zip, "boot.img.p", d)
-
-      target_expr = 'concat("{}:",{},":{}:{}")'.format(
-          boot_type, boot_device_expr, target_boot.size, target_boot.sha1)
-      source_expr = 'concat("{}:",{},":{}:{}")'.format(
-          boot_type, boot_device_expr, source_boot.size, source_boot.sha1)
-      script.PatchPartitionExprCheck(target_expr, source_expr)
-
-      required_cache_sizes.append(target_boot.size)
+    include_full_boot = True
+    common.ZipWriteStr(output_zip, "boot.img", target_boot.data)
 
   if required_cache_sizes:
     script.CacheFreeSpaceCheck(max(required_cache_sizes))
