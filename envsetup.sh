@@ -543,6 +543,11 @@ function lunch()
 
     local product release variant
 
+    if [ -z "$variant" ]; then
+        variant=$release
+        release=$(ls -1 -I trunk -I root $(gettop)/build/release/aconfig/)
+    fi
+
     # Handle the legacy format
     local legacy=$(echo $1 | grep "-")
     if [[ $# -eq 1 && -n $legacy ]]; then
