@@ -810,6 +810,11 @@ function lunch()
     # Split string on the '-' character.
     IFS="-" read -r product release variant <<< "$selection"
 
+    if [ -z "$variant" ]; then
+        variant=$release
+        release=$(ls -1 -I trunk build/release/aconfig/)
+    fi
+
     if [[ -z "$product" ]] || [[ -z "$release" ]] || [[ -z "$variant" ]]
     then
         echo
