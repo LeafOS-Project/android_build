@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d0318e5b_8c1dac4a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1000017
+      },
+      "writtenOn": "2024-07-12T16:16:05Z",
+      "side": 1,
+      "message": "depends on not yet uploaded lineage merges of hw/qcom-caf/common, tools/extract-utils, vendor/qcom/opensource/core-utils-vendor to be able to drop BUILD_BROKEN_INCORRECT_PARTITION_IMAGES for qcom devices\n\nhttps://review.lineageos.org/c/LineageOS/android_hardware_qcom-caf_common/+/395677",
+      "revId": "b9783bdefd2abaaa19a92f27eea9210737f9da35",
+      "serverId": "b49086b3-c06c-47ea-b69e-65c8379e1be6"
+    }
+  ]
+}
