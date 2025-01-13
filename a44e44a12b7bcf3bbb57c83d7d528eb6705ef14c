@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "c2bbd115_baf22dba",
+        "filename": "core/product_config.mk",
+        "patchSetId": 3
+      },
+      "lineNbr": 479,
+      "author": {
+        "id": 1000032
+      },
+      "writtenOn": "2025-01-13T21:06:29Z",
+      "side": 1,
+      "message": "Why is this needed?",
+      "revId": "a44e44a12b7bcf3bbb57c83d7d528eb6705ef14c",
+      "serverId": "b49086b3-c06c-47ea-b69e-65c8379e1be6"
+    }
+  ]
+}
